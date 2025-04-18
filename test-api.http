@@ -1,0 +1,51 @@
+### Menu Service
+GET http://localhost:3001/menu
+
+GET http://localhost:3001/menu/1
+
+### Order Service
+POST http://localhost:3002/orders
+Content-Type: application/json
+
+{
+  "customerId": 1,
+  "items": [
+    {
+      "menuItemId": 1,
+      "quantity": 2
+    }
+  ]
+}
+
+GET http://localhost:3002/orders/1
+
+### Payment Service
+POST http://localhost:3003/payments
+Content-Type: application/json
+
+{
+  "orderId": 1,
+  "amount": 7.00
+}
+
+### Inventory Service
+GET http://localhost:3004/inventory
+
+POST http://localhost:3004/inventory/update
+Content-Type: application/json
+
+{
+  "itemId": 1,
+  "quantity": 10
+}
+
+### Customer Service
+POST http://localhost:3005/customers
+Content-Type: application/json
+
+{
+  "name": "azmar",
+  "email": "azmar@gmail.com"
+}
+
+GET http://localhost:3005/customers/1
